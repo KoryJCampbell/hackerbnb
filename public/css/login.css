@@ -1,0 +1,9 @@
+
+ul li {
+    display: inline-block;
+  }
+
+a {
+  margin: 20px;
+  padding: 10px;
+}
