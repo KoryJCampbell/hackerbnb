@@ -11,7 +11,7 @@ var session      = require('express-session');
 var complimentsController = require("./controllers/calendarController");
 
 
-mongoose.connect('mongodb://localhost/app.js');
+// mongoose.connect('mongodb://localhost/app.js');
 
 app.engine('html', require('ejs').renderFile);
 
