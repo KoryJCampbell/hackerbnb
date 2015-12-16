@@ -46,18 +46,20 @@ app.get('/init', function(req, res){
         end_date:   new Date(2013,8,8),
         color: "#DD8616"
     });
-
+    // This should be in the seed file
     /*... skipping similar code for other test events...*/
 
     res.send("Test events were added to the database")
 });
 
-
+// This would be more appropriate in a controller
 app.get('/data', function(req, res){
     db.event.find().toArray(function(err, data){
         //set id property for all records
-        for (var i = 0; i < data.length; i++)
+        for (var i = 0; i < data.length; i++){
             data[i].id = data[i]._id;
+        }
+        // for loops need curlies
 
         //output response
         res.send(data);
@@ -65,7 +67,7 @@ app.get('/data', function(req, res){
 });
 
 require('./config/passport')(passport);
-
+// Any time you require something, I'd put it toward the top of the file with all the other requires
 var routes = require('./config/routes');
 app.use(routes);
 

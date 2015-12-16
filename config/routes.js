@@ -15,6 +15,7 @@ function authenticatedUser(req, res, next) {
 
 router.route('/index')
   .get(complimentsController.index);
+  // It looks like this is coming from EmergencyCompliment... which is fine! Just make sure you change all your variable names to match.
 
 router.route('/calendar')
   .get(calendarController.index);
