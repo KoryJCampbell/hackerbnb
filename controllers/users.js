@@ -20,6 +20,7 @@ function postSignup(request, response) {
     failureFlash : true
   });
   return signupStrategy(request, response);
+  // This seems to just hang
 }
 
 
